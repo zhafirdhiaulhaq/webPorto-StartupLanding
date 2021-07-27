@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+body {
+  background: #005CFB;
+}
+body section {
+  width: 100%;
+  height: 100vh;
+}
+
+.custom-nav {
+  background: #1E6FFC;
+}
+.custom-nav .container .navbar-brand img {
+  width: 13rem;
+}
+.custom-nav .container #navbarNav .nav-item {
+  margin-left: 20px;
+}
+.custom-nav .container #navbarNav .nav-item .nav-link {
+  color: white;
+  font-weight: 300;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  position: relative;
+}
+.custom-nav .container #navbarNav .nav-item .my-pick {
+  font-weight: 500;
+}
+.custom-nav .container #navbarNav .my-active::before {
+  content: "";
+  background-color: #FF7E1A;
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-left: -7px;
+  border-radius: 0 0 14px 14px;
+}
+
+.contentBox {
+  padding: 40px 80px;
+}
+.contentBox .txBox h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 3rem;
+}
+.contentBox .txBox h2 span {
+  color: #FF7E1A;
+}
+.contentBox .txBox p {
+  color: rgba(255, 255, 255, 0.425);
+}
+.contentBox .txBox a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 0.7em 2em;
+  background-color: #FF7E1A;
+  border-radius: 40px;
+}
+.contentBox .imgBox img {
+  width: 100%;
+  pointer-events: none;
+}
