@@ -18,23 +18,28 @@ body section {
 .custom-nav {
   background: #1E6FFC;
 }
-.custom-nav .container .navbar-brand img {
+.custom-nav .container-fluid .navbar-brand img {
   width: 13rem;
 }
-.custom-nav .container #navbarNav .nav-item {
+.custom-nav .container-fluid #navbarNav .nav-item {
   margin-left: 20px;
 }
-.custom-nav .container #navbarNav .nav-item .nav-link {
+.custom-nav .container-fluid #navbarNav .nav-item .nav-link {
   color: white;
   font-weight: 300;
   font-size: 0.9em;
   letter-spacing: 1px;
   position: relative;
 }
-.custom-nav .container #navbarNav .nav-item .my-pick {
+.custom-nav .container-fluid #navbarNav .nav-item .my-pick {
   font-weight: 500;
 }
-.custom-nav .container #navbarNav .my-active::before {
+@media (max-width: 768px) {
+  .custom-nav .container-fluid #navbarNav .nav-item .my-pick {
+    font-weight: 300;
+  }
+}
+.custom-nav .container-fluid #navbarNav .my-active::before {
   content: "";
   background-color: #FF7E1A;
   width: 100px;
@@ -44,6 +49,27 @@ body section {
   bottom: 0;
   margin-left: -7px;
   border-radius: 0 0 14px 14px;
+  border: none;
+  outline: none;
+}
+@media (max-width: 768px) {
+  .custom-nav .container-fluid #navbarNav .my-active::before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .custom-nav .container-fluid #navbarNav {
+    background-color: #005CFB;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  .custom-nav .container-fluid #navbarNav :nth-child(5) {
+    display: none;
+  }
+}
+.custom-nav .container-fluid .navbar-toggler span.navbar-toggler-icon {
+  background-color: white;
+  border-radius: 50%;
 }
 
 .contentBox {
@@ -57,8 +83,28 @@ body section {
 .contentBox .txBox h2 span {
   color: #FF7E1A;
 }
+@media screen and (min-width: 1300px) {
+  .contentBox .txBox h2 {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  .contentBox .txBox h2 {
+    font-size: 2.7rem;
+  }
+}
 .contentBox .txBox p {
   color: rgba(255, 255, 255, 0.425);
+}
+@media (min-width: 1300px) {
+  .contentBox .txBox p {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .contentBox .txBox p {
+    font-size: 0.7rem;
+  }
 }
 .contentBox .txBox a {
   text-decoration: none;
@@ -70,7 +116,28 @@ body section {
   background-color: #FF7E1A;
   border-radius: 40px;
 }
+@media (max-width: 768px) {
+  .contentBox .txBox a {
+    font-size: 0.8rem;
+    margin-top: -100px;
+  }
+}
 .contentBox .imgBox img {
   width: 100%;
   pointer-events: none;
+}
+@media (max-width: 768px) {
+  .contentBox .imgBox {
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .contentBox {
+    padding: 80px 160px;
+  }
+}
+@media (max-width: 768px) {
+  .contentBox {
+    padding: 40px 40px;
+  }
 }
